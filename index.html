@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Boilerplate code, no need to touch -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- End of boilerplate code -->
+
+    <!-- Logo import -->
+    <link rel="shortcut icon" href="portal.png">
+
+    <!-- Font import from google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lusitana|Raleway:500" rel="stylesheet">
+
+    <!-- Boostrap code import using a CDN. This requires internet connection as it downloads the file upon startup of the webpage inside the browser! -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Code pen fancy background, you said to be be creative :) -->
+    <link rel="stylesheet" href="https://codepen.io/P1N2O/pen/pyBNzX.css">
+
+    <!-- my custom css -->
+    <style>
+      body {
+        font-family: 'Lusitana', serif;
+      }
+
+      h1, h2, h3, h4 {
+        font-family: 'Raleway', sans-serif;
+      }
+
+      .menu_element {
+        font-size: 20px;
+      }
+      
+      .gallery-item {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      #header {
+        margin-top: 25px;
+        background-image: url("four.jpg");
+        background-size: cover;
+        background-position: 0% 75%;
+        height: 500px;
+        color: #731c1c !important;
+      }
+
+      a { color: white; }
+    </style>
+
+    <title>James' Dimension</title>
+  </head>
+  <body>
+    <div class="container" id="main">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="jumbotron" id="header">
+
+            <h1 style="opacity:1;">Welcome to James' Dimension</h1>
+
+            <p style="color:#0579c7; font-weight: bold;">Feel free to have a look around... If you dare!</p>
+            <p ><a class="btn btn-info btn-lg" href="#" role="button">Contact me</a></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <h2>Table of contents</h2>
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">Options</th>
+                </tr>
+              </thead>
+              <tr>
+                <td class="menu_element">
+                  <a href="#one_image" onclick="show_image('one');" id="one">show one</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="menu_element">
+                  <a href="#two_image" onclick="show_image('two');" id="two">show two</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="menu_element">
+                  <a href="#three_image" onclick="show_image('three');" id="three">show three</a>
+                </td>
+              </tr>
+              
+            </table>
+          </div>
+          <div class="col-md-4"></div>
+        </div>
+        <div class="row" style="margin-top: 25px;">
+          <div class="col-md-12 gallery-item" id="one_image" style="display: none;">
+            <hr style="font-size: 25px;"></hr>
+            <div class="col-md-6"><img class="img-responsive" src="one.jpg" ></div>
+            <div class="col-md-6">
+              <ul style="font-size: 25px; margin-top: 50px;">
+                <li>UBA UBA GOOOOBA</li>
+                <li>きちみきみちもトカンリイとてちき</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-12 gallery-item" id="two_image" style="display: none;">
+            <hr></hr>
+            <div class="col-md-6"><img class="img-responsive" src="two.jpg" ></div>
+            <div class="col-md-6">
+              <ul style="font-size: 25px; margin-top: 50px;">
+                <li>UBA UBA GOOOOBA</li>
+                <li>きちみきみちもトカンリイとてちき</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-12 gallery-item" id="three_image" style="display: none;">
+            <hr></hr>
+            <div class="col-md-6"><img class="img-responsive" src="three.jpg" ></div>
+            <div class="col-md-6">
+              <ul style="font-size: 25px; margin-top: 50px;">
+                <li>UBA UBA GOOOOBA</li>
+                <li>きちみきみちもトカンリイとてちき</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Javascript for showing the pictures-->
+    <script>
+      function show_image(name) {
+        if (name === "one") {
+          if (document.getElementById("one").innerHTML === "hide one") {
+            document.getElementById("one").innerHTML = "show one";
+            document.getElementById("one_image").style.display = "none";
+          } else {
+            document.getElementById("one").innerHTML = "hide one";
+            document.getElementById("one_image").style.display = "block";
+          }
+          return;
+        }
+        if (name === "two") {
+          if (document.getElementById("two").innerHTML === "hide two") {
+            document.getElementById("two").innerHTML = "show two";
+            document.getElementById("two_image").style.display = "none";
+          } else {
+            document.getElementById("two").innerHTML = "hide two";
+            document.getElementById("two_image").style.display = "block";
+          }
+          return;
+        }
+        if (name === "three") {
+          if (document.getElementById("three").innerHTML === "hide three") {
+            document.getElementById("three").innerHTML = "show three";
+            document.getElementById("three_image").style.display = "none";
+          } else {
+            document.getElementById("three").innerHTML = "hide three";
+            document.getElementById("three_image").style.display = "block";
+          }
+          return;
+        }
+      }
+    </script>
+  </body>
+</html>
